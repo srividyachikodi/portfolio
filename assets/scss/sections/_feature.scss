@@ -1,0 +1,81 @@
+.feature {
+    .feature_item {
+        height: 100%;
+        padding: 35px 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: $transition;
+
+
+        .inner {
+            .icon {
+                margin-bottom: 28px;
+
+                svg {
+                    width: 50px;
+                    height: auto;
+                    color: $color_primary;
+                    stroke-width: 1 !important;
+                }
+            }
+
+            .content {
+                .title {
+                    a {
+                        font-family: $font_poppins;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 32px;
+                        margin-bottom: 20px;
+                        color: $color_dark;
+                    }
+                }
+
+                .description {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin-bottom: 22px;
+                }
+
+                .read-more-button {
+                    color: $color_primary;
+                    font-size: 32px;
+                }
+            }
+        }
+
+        &:hover,
+        &:active {
+            background: $color_gradient_red_box;
+            color: $color_white;
+
+            .inner {
+                .icon {
+                    svg {
+                        color: $color_white;
+                    }
+                }
+
+                .content {
+                    .title {
+                        a {
+                            color: $color_white
+                        }
+                    }
+
+                    .read-more-button {
+                        color: $color_white;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // RESPONSIV
+    @media only screen and (max-width: 575px) {
+        .feature_item {
+            padding: 20px;
+        }
+    }
+}

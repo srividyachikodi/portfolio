@@ -1,0 +1,99 @@
+/*================================================================
+	
+	STYLESHEET INDEXING
+	|
+	|___Helper
+	|	|___Fonts
+	|	|___Variables
+	|	|___Global
+	|
+	|___Components
+	|	|___Inputs
+	|	|___Cards
+	|	|___Social_links
+	|
+	|___Layout
+	|	|___Header
+	|	|___Footer
+	|
+	|___ Sections
+	|	|___Hero
+	|	|___Feature
+	|	|___Portfolio
+	|	|___Resume
+	|	|___Clients
+	|	|___Popular_client
+	|	|___Pricing
+	|	|___Blog
+	|	|___Contact
+	|
+	|___ END STYLESHEET INDEXING
+
+===================================================================*/
+
+
+/*----------------------------------
+  ~~~ Helper ~~~
+-----------------------------------*/
+
+/* Variables */
+@import 'helper/fonts';
+/* Variables */
+@import 'helper/variables';
+/* Global */
+@import 'helper/global';
+
+
+
+/*----------------------------------
+  ~~~ Components ~~~
+-----------------------------------*/
+
+/* Inputs */
+@import 'components/inputs';
+/* Cards */
+@import 'components/cards';
+/* Social_links */
+@import 'components/social_links';
+
+
+
+/*----------------------------------
+	~~~ Layout ~~~
+-----------------------------------*/
+
+/* Header */
+@import 'layout/header';
+/* Footer */
+@import 'layout/footer';
+
+
+
+/*----------------------------------
+	~~~ Sections ~~~
+-----------------------------------*/
+
+/* Hero */
+@import 'sections/hero';
+/* Feature */
+@import 'sections/feature';
+/* Portfolio */
+@import 'sections/portfolio';
+/* Resume */
+@import 'sections/resume';
+/* Clients */
+@import 'sections/clients';
+/* Popular_client */
+@import 'sections/popular_client';
+/* Pricing */
+@import 'sections/pricing';
+/* Blog */
+@import 'sections/blog';
+/* Contact */
+@import 'sections/contact';
+
+
+
+/*----------------------------------
+	~~~ Pages ~~~
+----------------------------------- */

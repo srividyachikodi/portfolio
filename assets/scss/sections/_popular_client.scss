@@ -1,0 +1,150 @@
+.popular-client {
+    .clients-wrapper {
+        width: 100%;
+        top: 120px;
+
+        .tab-navigation-button {
+            float: left;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            flex-wrap: nowrap;
+            margin-top: 0;
+
+            .nav-item {
+                font-size: 18px;
+                line-height: 1.5;
+                margin: 0;
+                color: $color_text;
+
+                .nav-link {
+                    border: none;
+                    font-size: 18px;
+                    color: $color_text;
+                    height: 90px;
+                    border-radius: 10px;
+                    padding: 15px 20px;
+                    width: 100%;
+                    display: flex;
+                    margin: 0;
+                    align-items: center;
+                    transition: 0.3s;
+                    justify-content: center;
+
+                    &:hover {
+                        background: $color_gradient_box;
+                        box-shadow: $shadow_1;
+                        color: $color_primary;
+                    }
+                }
+
+                .active {
+                    background: $color_gradient_box;
+                    box-shadow: $shadow_1;
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+
+    .tab-area {
+        .tab-content {
+            .tab-pane {
+                .client-card {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px;
+                    margin-top: -30px;
+
+                    .main-content {
+                        .inner {
+                            background: $color_gradient_box;
+                            box-shadow: $shadow_1;
+                            border-radius: 10px;
+
+                            .thumbnail {
+                                height: 150px;
+                                align-items: center;
+                                display: flex;
+                                justify-content: center;
+                                padding: 30px;
+
+                                a {
+                                    display: block;
+
+                                    img {
+                                        max-height: 90px;
+                                    }
+                                }
+                            }
+
+                            .seperator {
+                                position: relative;
+                                z-index: 2;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 1px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    background-color: $color_border;
+                                    z-index: -1;
+                                }
+                            }
+
+                            .client-name {
+                                padding: 20px;
+
+                                a {
+                                    color: $color_text;
+                                    transition: $transition;
+
+                                    &:hover {
+                                        color: $color_primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // RESPONSIVE
+    @media only screen and (max-width: 1199px) {
+        .clients-wrapper{
+            .tab-navigation-button{
+                .nav-item{
+                    .nav-link{
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .tab-area {
+            .tab-content {
+                .tab-pane {
+                    .client-card {
+                        .main-content {
+                            flex-basis: 100%;
+
+                            .inner{
+                                .thumbnail{
+                                    padding: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

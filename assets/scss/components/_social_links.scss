@@ -1,0 +1,32 @@
+.social-share-inner {
+    .title {
+        color: $color_dark;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .social-share {
+        padding: 0;
+        list-style: none;
+
+        li {
+            a {
+                height: 60px;
+                width: 60px;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color_primary;
+            }
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+}

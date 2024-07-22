@@ -1,0 +1,342 @@
+.clients {
+    .swiper {
+        position: relative;
+
+        .slider-arrow {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+
+            .icon {
+                background: $color_gradient_box;
+                box-shadow: $shadow_1;
+                width: 60px;
+                height: 60px;
+                border-radius: 6px;
+                color: $color_primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: $transition;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+
+                &:hover,
+                &:active {
+                    background: $color_gradient_red_box;
+                    color: $color_white;
+                }
+            }
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                .inner {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 25px;
+
+                    .card-info {
+                        background: $color_gradient_box;
+                        box-shadow: $shadow_1;
+                        padding: 30px;
+                        border-radius: 10px;
+                        height: 100%;
+
+                        .card-thumbnail {
+                            overflow: hidden;
+                            border-radius: 10px;
+                            margin-bottom: 27px;
+                            display: flex;
+
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                transition: $transition;
+                                display: inline-block !important;
+                                object-fit: cover;
+                                width: 100%;
+                            }
+                        }
+
+                        .card-content {
+
+                            .subtitle {
+                                font-size: 12px;
+                                color: $color_primary;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+                                margin-bottom: 22px;
+                            }
+
+                            .title {
+                                font-size: 24px;
+                                margin-top: 10px;
+                                margin-bottom: 0px;
+                                line-height: 34px;
+                                color: $color_dark;
+                                font-weight: 700;
+                            }
+
+                            .designation {
+                                color: $color_text;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .card-description {
+                        position: relative;
+                        padding: 50px 40px 50px 40px;
+                        border-radius: 10px;
+                        background: $color_gradient_box;
+                        box-shadow: $shadow_1;
+                        margin-top: 115px;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 51px;
+                            height: 5px;
+                            background: $color_border;
+                            left: -43px;
+                            z-index: -1;
+                            top: 66px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 130px;
+                            height: 130px;
+                            left: 0;
+                            top: -130px;
+                            background: transparent;
+                            background-image: url(../images/icons/quote.png);
+                            background-size: cover;
+                            z-index: -1;
+                            opacity: 0.5;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+
+                        .title-area {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .title-info {
+                                .title {
+                                    font-size: 26px;
+                                    font-weight: 500;
+                                    margin-bottom: 10px;
+                                    color: $color_dark;
+                                }
+
+                                .date {
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    color: $color_text;
+                                }
+                            }
+
+                            .rating {
+                                padding: 10px;
+                                border-radius: 6px;
+                                background: $color_gradient_box;
+                                box-shadow: $shadow_1;
+                                display: flex;
+                                flex-wrap: nowrap;
+
+                                i {
+                                    color: $color_warning;
+                                    font-size: 14px;
+
+                                    &:not(:last-child) {
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .seperator {
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 2px;
+                                background-color: $color_border;
+                                top: 20px;
+                            }
+                        }
+
+                        .description {
+                            margin-top: 45px;
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                height: 12px;
+                width: 12px;
+                background: $color_body;
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+
+            .swiper-pagination-bullet-active {
+                background: $color_primary;
+            }
+        }
+
+    }
+
+
+    // RESPONSIVE
+    @media only screen and (max-width: 991px) {
+        .swiper {
+            .slider-arrow {
+                display: none;
+            }
+
+            .swiper-wrapper {
+                .swiper-slide {
+                    .inner {
+                        .card-description {
+                            margin-top: 6px;
+
+                            &::before,
+                            &::after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .inner {
+                        .card-info {
+                            .card-thumbnail {
+                                max-width: 150px;
+                                margin-right: 25px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .inner {
+                        .card-info {
+                            .card-thumbnail {
+                                max-width: 100px;
+                                margin-right: 25px;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        .card-description {
+                            .title-area {
+                                .title-info {
+                                    .title {
+                                        font-size: 18px;
+                                    }
+
+                                    .date {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 575px) {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .inner {
+                        .card-info {
+                            .card-thumbnail {
+                                max-width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .card-description {
+                            .title-area {
+                                .rating {
+                                    i {
+                                        font-size: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .inner {
+                        .card-info{
+                            padding: 20px;
+                        }
+                        
+                        .card-description {
+                            padding: 20px;
+                            
+                            .title-area {
+                                display: block;
+
+                                .title-info {
+                                    margin-bottom: 25px;
+                                }
+
+                                .rating{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,366 @@
+.resume {
+
+    // Tabs
+    .resume_tabs {
+        border-radius: 10px;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .nav-item {
+            flex-basis: 25%;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .nav-link {
+                color: $color_dark;
+                font-family: $font_poppins;
+                padding: 30px 10px;
+                text-transform: capitalize;
+                font-size: 18px;
+                font-weight: 500;
+                outline: none;
+                border: 0 none;
+                transition: all 0.5s;
+                background: transparent;
+                border-radius: 10px;
+
+                &:hover{
+                    color: $color_primary;
+                background: $color_gradient_box;
+                box-shadow: $shadow_1;
+                }
+            }
+
+            .active {
+                color: $color_primary;
+                background: $color_gradient_box;
+                box-shadow: $shadow_1;
+            }
+        }
+    }
+
+
+    // Tabs Content
+    .resume_tabs_content {
+        .tab_item {
+            .tab_item_inner {
+                .content {
+                    .subtitle {
+                        color: $color_primary;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        font-weight: 500;
+                    }
+
+                    .maintitle {
+                        font-size: 36px;
+                        font-family: $font_montserrat;
+                        font-weight: 700;
+                        line-height: 62px;
+                        color: $color_dark;
+                    }
+
+                    .progress-charts{
+                        overflow: hidden;
+
+                        .heading{
+                            margin-bottom: 15px;
+                            color: $color_dark;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            opacity: 0.9;
+                            font-weight: 500;
+                        }
+
+                        .progress{
+                            height: 13px;
+                            overflow: visible;
+                            font-size: 14px;
+                            border-radius: 10px;
+                            padding: 3px;
+                            background: $color_border;
+                            box-shadow: none;
+
+                            .progress-bar{
+                                overflow: visible;
+                                position: relative;
+                                border-radius: 14px;
+                                background: $color_gradient_progress;
+
+                                .percent-label{
+                                    position: absolute;
+                                    right: -7px;
+                                    top: -22px;
+                                    font-weight: 400;
+                                    color: $color_text;
+                                    font-size: 14px;
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                    opacity: 0.9;
+                                }
+                            }
+                        }
+
+                        &:not(:last-child){
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    .experience-list {
+                        border-left: 5px solid $color_border;
+                        padding-left: 31px;
+
+                        .resume-single-list {
+                            background: $color_gradient_box;
+                            box-shadow: $shadow_1;
+                            position: relative;
+                            z-index: 2;
+                            margin-top: 50px;
+                            padding: 45px 40px;
+                            border-radius: 6px;
+                            transition: $transition;
+
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                transition: $transition;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 6px;
+                                top: 0;
+                                left: 0;
+                                background: $color_gradient_red_box;
+                                opacity: 0;
+                                z-index: -1;
+                            }
+
+                            .inner {
+
+                                &::before{
+                                    position: absolute;
+                                    content: "";
+                                    width: 28px;
+                                    height: 5px;
+                                    right: 100%;
+                                    top: 63px;
+                                    transform: translateY(-7px);
+                                    background: $color_border;
+                                    z-index: 0;
+                                }
+
+                                .heading {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    border-bottom: 1px solid $color_border;
+                                    padding-bottom: 20px;
+                                    margin-bottom: 20px;
+
+                                    .title {
+                                        margin-bottom: 15px;
+
+                                        h4{
+                                            color: $color_dark;
+                                            font-family: $font_poppins;
+                                            font-size: 24px;
+                                            line-height: 39px;
+                                            margin-bottom: 7px;
+                                            font-weight: 500;
+                                            transition: $transition;
+                                        }
+
+                                        span{
+                                            color: $color_text;
+                                            display: block;
+                                            font-size: 14px;
+                                            transition: $transition;
+                                        }
+                                    }
+
+                                    .date-of-time {
+                                        display: inline-block;
+
+                                        span{
+                                            color: $color_primary;
+                                            display: block;
+                                            font-size: 14px;
+                                            padding: 0 15px;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            border-radius: 6px;
+                                            background: $color_white;
+                                            box-shadow: $shadow_1;
+                                            transition: $transition;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+
+                                .description {
+                                    font-size: 18px;
+                                    line-height: 28px;
+                                    color: $color_text;
+                                    transition: $transition;
+                                }
+
+                                &::after{
+                                    position: absolute;
+                                    content: "";
+                                    width: 20px;
+                                    height: 20px;
+                                    border: 5px solid $color_border;
+                                    border-radius: 100%;
+                                    right: 104%;
+                                    top: 55px;
+                                    transform: translateY(-7px);
+                                    background: $color_bg_white;
+                                    transition: $transition;
+                                }
+                            }
+
+                            &:hover{
+                                .inner{
+                                    .heading{
+                                        .title{
+                                            h4, span{
+                                                color: $color_white;
+                                            }
+                                        }
+                                    }
+
+                                    .description{
+                                        color: $color_white;
+                                    }
+
+                                    &::after{
+                                        background: $color_primary;
+                                    }
+                                }
+
+                                &::before{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // RESPONSIVE
+    @media only screen and (max-width: 991px){
+        .resume_tabs{
+            .nav-item{
+                .nav-link{
+                    padding: 25px 7px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .resume_tabs_content{
+            .tab_item{
+                .tab_item_inner{
+                    .content{
+                        .maintitle{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        .resume_tabs{
+            .nav-item{
+                .nav-link{
+                    font-size: 18px;
+                    padding: 18px 6px;
+                }
+            }
+        }
+
+        .resume_tabs_content{
+            .tab_item{
+                .tab_item_inner{
+                    .content{
+                        .maintitle{
+                            font-size: 24px;
+                        }
+
+                        .experience-list{
+                            padding-left: 27px;
+
+                            .resume-single-list{
+                                .inner{
+                                    .heading{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 575px){
+        .resume_tabs_content{
+            .tab_item{
+                .tab_item_inner{
+                    .content{
+                        .experience-list{
+                            .resume-single-list{
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 479px){
+        .resume_tabs_content{
+            .tab_item{
+                .tab_item_inner{
+                    .content{
+                        .experience-list{
+                            padding-left: 14px;
+
+                            .resume-single-list{
+                                padding: 20px;
+
+                                .inner{
+                                    &::before{
+                                        width: 20px;
+                                    }
+
+                                    &::after{
+                                        right: 102%;
+                                    }
+
+                                    .heading{
+                                        .title{
+                                            h4{
+                                                font-size: 21px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+}

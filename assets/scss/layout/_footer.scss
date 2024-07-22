@@ -1,0 +1,22 @@
+.footer{
+    .footer-area{
+        text-align: center;
+
+        .description{
+            font-size: 17px;
+            color: $color_text;
+            font-family: $font_poppins;
+            margin-top: 30px;
+            margin-bottom: 0;
+
+            a{
+                color: $color_text;
+                transition: $transition;
+
+                &:hover{
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+}
