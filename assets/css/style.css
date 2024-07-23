@@ -872,7 +872,7 @@ body .section-title .title {
   border-radius: 6px;
   top: 0;
   left: 0;
-  background: linear-gradient(145deg, #ff014f, #d11414);
+  background: linear-gradient(145deg, #ffffff, #ffffff);
   opacity: 0;
   z-index: -1;
 }
@@ -949,10 +949,10 @@ body .section-title .title {
   transition: 0.4s;
 }
 .resume .resume_tabs_content .tab_item .tab_item_inner .content .experience-list .resume-single-list:hover .inner .heading .title h4, .resume .resume_tabs_content .tab_item .tab_item_inner .content .experience-list .resume-single-list:hover .inner .heading .title span {
-  color: #fff;
+  color: #000000;
 }
 .resume .resume_tabs_content .tab_item .tab_item_inner .content .experience-list .resume-single-list:hover .inner .description {
-  color: #fff;
+  color: #000000;
 }
 .resume .resume_tabs_content .tab_item .tab_item_inner .content .experience-list .resume-single-list:hover .inner::after {
   background: #ff014f;
