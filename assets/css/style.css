@@ -2031,73 +2031,66 @@ body .section-title .title {
 }
 .experience-organizations {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(.75rem, 2vw, 1.25rem);
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .experience-card {
+  --card-base: #291923;
+  --card-glow: #713353;
+  --card-accent: #ffb4cd;
   position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
-  min-block-size: 9rem;
-  padding: clamp(1.3rem, 4vw, 2.5rem);
+  min-block-size: clamp(11rem, 18vw, 15rem);
+  padding: clamp(1.4rem, 4.5vw, 3.75rem);
   overflow: hidden;
-  border: 1px solid var(--portfolio-border);
   border-radius: 18px;
-  background: linear-gradient(135deg, #fff 60%, #f8edf3);
-  box-shadow: 0 8px 24px #3710260b;
-  font-size: clamp(1.35rem, 2.65vw, 2.15rem);
+  background:
+    radial-gradient(ellipse at 100% 10%, var(--card-glow), transparent 70%),
+    var(--card-base);
+  box-shadow: 0 8px 24px #37102618;
+  color: #fff5fa;
+  font-size: clamp(1.65rem, 4.15vw, 3.4rem);
   font-weight: 700;
   letter-spacing: -.035em;
-  line-height: 1.17;
+  line-height: 1.16;
+}
+.experience-card:nth-child(even) {
+  --card-base: #202333;
+  --card-glow: #47456b;
+  --card-accent: #c8bef8;
 }
 .experience-card::before {
   position: absolute;
   inset: 0 auto 0 0;
   width: 4px;
-  background: var(--portfolio-accent);
+  background: var(--card-accent);
   content: "";
 }
+.experience-card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 50% -4% auto auto;
+  width: clamp(8rem, 30vw, 25rem);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, transparent 0 17px, var(--card-accent) 18px 19px, transparent 20px 29px);
+  opacity: .14;
+  content: "";
+  pointer-events: none;
+}
 .experience-card span {
-  position: relative;
   max-inline-size: 24ch;
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
-.experience-card-featured {
-  grid-column: 1 / -1;
-  min-block-size: clamp(11rem, 20vw, 16rem);
-  background:
-    radial-gradient(ellipse at 100% 10%, #713353, transparent 65%),
-    #291923;
-  color: #fff5fa;
-  font-size: clamp(1.9rem, 5vw, 4rem);
-}
-.experience-card-featured::before {
-  background: #ffb4cd;
-}
-.experience-card-featured::after {
-  position: absolute;
-  inset: 50% -3% auto auto;
-  width: clamp(11rem, 34vw, 28rem);
-  aspect-ratio: 1;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: repeating-radial-gradient(circle, transparent 0 17px, #ffb4cd24 18px 19px, transparent 20px 29px);
-  content: "";
-  pointer-events: none;
-}
-.experience-card-featured span {
-  z-index: 1;
-}
-@media (max-width: 575px) {
-  .experience-organizations {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .experience-card:not(.experience-card-featured) {
-    min-block-size: 7.5rem;
+@media (min-width: 768px) {
+  .experience-card {
+    padding-inline-end: clamp(6rem, 17vw, 14rem);
   }
 }
 #projects {
