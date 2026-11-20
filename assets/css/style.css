@@ -1847,24 +1847,76 @@ body .section-title .title {
 .resume .portfolio-experience-timeline .portfolio-role-card .portfolio-experience-highlights { display: block; }
 .resume .portfolio-experience-timeline .portfolio-role-card .portfolio-experience-highlights li { list-style: disc outside; }
 /* Client logo cards */
-.portfolio-client-grid .portfolio-client-item .portfolio-client-inner { height: 100%; min-height: 155px; }
-.portfolio-client-wordmark { display: flex !important; flex-direction: column; align-items: center; gap: 7px; color: #252f3b; text-decoration: none; font-size: 15px; line-height: 1.3; font-weight: 700; }
-.portfolio-client-wordmark:hover, .portfolio-client-wordmark:focus { color: #b6003a; }
-@media (max-width: 575px) { .portfolio-experience-intro { font-size: 15px; } .portfolio-client-wordmark { font-size: 13px; } }
-
-.portfolio-client-grid .portfolio-client-wordmark .portfolio-client-logo {
-  width: 150px;
-  max-width: 100%;
-  height: 70px;
+.portfolio-client-grid .portfolio-client-thumbnail {
+  display: grid;
+  place-items: center;
+  min-height: 140px;
+  padding: 16px 10px;
+}
+.portfolio-client-grid .portfolio-client-link {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.portfolio-client-grid .portfolio-client-logo {
+  width: min(100%, 180px);
+  height: 78px;
   object-fit: contain;
 }
-.portfolio-client-grid .portfolio-client-wordmark .portfolio-client-logo[src$="/university-of-michigan.png"] {
+.portfolio-client-grid .portfolio-client-logo[src$="/university-of-michigan.png"] {
   width: auto;
   background: #00274c;
   border-radius: 4px;
 }
-.popular-client .tab-area .tab-content .tab-pane .portfolio-client-grid .portfolio-client-item .portfolio-client-thumbnail {
-  height: auto;
-  min-height: 155px;
-  padding: 18px 10px;
+
+/* Portfolio typography */
+.hero .content .inner {
+  margin-bottom: 36px;
+}
+.hero .content .inner .title {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.14;
+  margin-bottom: 12px;
+}
+.hero .content .inner .hero-role {
+  color: #ff7098;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+.hero .content .inner .description {
+  max-width: 58ch;
+  padding-right: 0;
+  color: #eee;
+  opacity: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.hero .content .inner .description + .description {
+  margin-top: 12px;
+}
+body .section-title .title {
+  font-size: clamp(2rem, 5vw, 3.125rem);
+}
+body .section-title .subtitle,
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .subtitle {
+  color: #a60036;
+  line-height: 1.4;
+}
+.resume .portfolio-experience-intro,
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights {
+  max-width: 72ch;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights li {
+  font-size: 1rem;
+}
+.blog .blog_item .inner .content .title a {
+  line-height: 1.4;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #a60036;
+  outline-offset: 3px;
 }

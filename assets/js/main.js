@@ -97,34 +97,6 @@
     });
 })(window.jQuery);
 
-
-// Type Writer
-var app = document.getElementById('mySkill');
-
-var typewriter = new Typewriter(app, {
-    loop: true,
-    delay: 75,
-});
-
-typewriter
-    .pauseFor(200)
-    .typeString('Data Analyst.')
-    .deleteChars(13)
-    .pauseFor(200)
-    .typeString('Business Analyst.')
-    .deleteChars(17)
-    .pauseFor(200)
-    .typeString('Business Intelligence Engineer.')
-    .deleteChars(31)
-    .pauseFor(300)
-    .typeString('Tableau Developer.')
-    .deleteChars(18)
-    .pauseFor(300)
-    .typeString('Data Engineer.')
-    .pauseFor(1000)
-    .start();
-
-
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
