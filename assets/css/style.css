@@ -1837,3 +1837,19 @@ body .section-title .title {
   .resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card { padding: 22px 20px; }
   .resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights li { font-size: 14px; line-height: 1.65; }
 }
+
+
+/* 2026 v3: ensure full experience history is immediately readable */
+.portfolio-experience-intro { max-width: 760px; margin: 0 0 18px; color: #414a55; font-size: 16px; line-height: 1.7; }
+.resume .portfolio-experience-timeline { display: block; }
+.resume .portfolio-experience-timeline .portfolio-role-card { display: block; visibility: visible; opacity: 1; }
+.resume .portfolio-experience-timeline .portfolio-role-card .heading .title { width: 100%; }
+.resume .portfolio-experience-timeline .portfolio-role-card .portfolio-experience-highlights { display: block; }
+.resume .portfolio-experience-timeline .portfolio-role-card .portfolio-experience-highlights li { list-style: disc outside; }
+/* Clearly labeled branded text cards match the site's existing light neumorphic client grid. */
+.portfolio-client-grid .portfolio-client-item .portfolio-client-inner { height: 100%; min-height: 155px; }
+.portfolio-client-grid .portfolio-client-item .portfolio-client-thumbnail { min-height: 155px; height: auto; padding: 18px 10px; }
+.portfolio-client-wordmark { display: flex !important; flex-direction: column; align-items: center; gap: 7px; color: #252f3b; text-decoration: none; font-size: 15px; line-height: 1.3; font-weight: 700; }
+.portfolio-client-wordmark:hover, .portfolio-client-wordmark:focus { color: #b6003a; }
+.portfolio-client-monogram { display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 9px; background: #00274c; color: #ffcb05; font-size: 31px; line-height: 1; font-family: Georgia, serif; font-weight: bold; }
+@media (max-width: 575px) { .portfolio-experience-intro { font-size: 15px; } .portfolio-client-wordmark { font-size: 13px; } }
