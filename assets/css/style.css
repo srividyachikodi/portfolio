@@ -1783,3 +1783,57 @@ body .section-title .title {
 .portfolio-certification-label { color: #ff5e8b; font-size: .82rem; letter-spacing: .07em; text-transform: uppercase; font-weight: 700; margin: 0; }
 .portfolio-certification-card p:last-child { color: #ddd; margin-bottom: 0; }
 @media (max-width: 575px) { .portfolio-certification-card { padding: 1.2rem; gap: .8rem; } .portfolio-certification-icon { flex-basis: 44px; width: 44px; height: 44px; } }
+
+/* 2026 experience readability refresh — limited to the experience timeline */
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline {
+  border-left: 3px solid #cbd4db;
+  padding-left: 26px;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card {
+  margin-top: 26px;
+  padding: 27px 30px 25px;
+  border: 1px solid #dce3ea;
+  border-radius: 12px;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card:first-child { margin-top: 18px; }
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card .heading {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card .heading .title { margin-bottom: 0; }
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card h4 {
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #34383e;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-dates {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555e68;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #353d46;
+  margin: 0 0 9px;
+  overflow-wrap: anywhere;
+}
+.resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights li:last-child { margin-bottom: 0; }
+@media (max-width: 767px) {
+  .resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline { padding-left: 16px; }
+  .resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-role-card { padding: 22px 20px; }
+  .resume .resume_tabs_content .tab_item .tab_item_inner .content .portfolio-experience-timeline .portfolio-experience-highlights li { font-size: 14px; line-height: 1.65; }
+}
