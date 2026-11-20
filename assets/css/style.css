@@ -1984,3 +1984,52 @@ main section[id] {
     margin-inline: auto;
   }
 }
+
+/* Name entrance */
+.hero-name-given,
+.hero-name-family {
+  display: inline-block;
+}
+.hero-name-family {
+  position: relative;
+  color: #ffb4cd;
+}
+.hero-name-family::after {
+  position: absolute;
+  inset: auto 0 .02em;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff7098, #ffd3e2 75%, transparent);
+  content: "";
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-name-given,
+  .hero-name-family {
+    animation: hero-name-enter 680ms cubic-bezier(.2, .75, .25, 1) both;
+  }
+  .hero-name-family {
+    animation-delay: 140ms;
+  }
+  .hero-name-family::after {
+    transform-origin: left center;
+    animation: hero-name-underline 580ms cubic-bezier(.2, .75, .25, 1) 520ms both;
+  }
+}
+@keyframes hero-name-enter {
+  from {
+    opacity: .35;
+    transform: translateY(.22em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hero-name-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
