@@ -20,6 +20,11 @@
             navMenu.removeClass('menu-on');
             navbarToggler.removeClass('active');
         });
+        navMenu.find('.main-menu a[href^="#"]').on('click', function () {
+            if (navMenu.hasClass('menu-on')) {
+                closeIcon.trigger('click');
+            }
+        });
         // adds toggle button to li items that have children
         navMenu.find('li a').each(function () {
             if ($(this).next().length > 0) {
@@ -97,23 +102,72 @@
     });
 })(window.jQuery);
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
+if (typeof Swiper === 'function' && document.querySelector('.swiper')) {
+    new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.arrow-next',
-        prevEl: '.arrow-prev',
-    },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.arrow-next',
+            prevEl: '.arrow-prev',
+        },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+}
+
+const rotatingTitle = document.getElementById('hero-role-text');
+const titleControl = document.querySelector('.hero-motion');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (rotatingTitle && titleControl) {
+    const titles = [
+        rotatingTitle.textContent,
+        'Data Analyst',
+        'Business Analyst',
+        'Business Intelligence Engineer',
+        'Tableau Developer',
+        'Data Engineer',
+    ];
+    let currentTitle = 0;
+    let timer;
+    let paused = false;
+
+    function updateRotation() {
+        window.clearInterval(timer);
+        titleControl.hidden = reducedMotion.matches;
+        titleControl.textContent = paused ? 'Play titles' : 'Pause titles';
+        if (reducedMotion.matches) {
+            rotatingTitle.textContent = titles[0];
+            currentTitle = 0;
+            return;
+        }
+        if (!paused) {
+            timer = window.setInterval(() => {
+                currentTitle = (currentTitle + 1) % titles.length;
+                const title = titles[currentTitle];
+                rotatingTitle.textContent = title;
+                rotatingTitle.animate(
+                    [{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0)' }],
+                    { duration: 650, easing: `steps(${title.length}, end)` }
+                );
+            }, 3400);
+        }
+    }
+
+    titleControl.addEventListener('click', () => {
+        paused = !paused;
+        updateRotation();
+    });
+    reducedMotion.addEventListener('change', updateRotation);
+    updateRotation();
+}

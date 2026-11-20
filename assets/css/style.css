@@ -1920,3 +1920,67 @@ button:focus-visible {
   outline: 2px solid #a60036;
   outline-offset: 3px;
 }
+
+/* Intro and section navigation */
+.hero {
+  background: radial-gradient(ellipse at 90% 15%, #331424, transparent 60%), #101014;
+}
+.hero .content .inner .title {
+  text-wrap: balance;
+}
+.hero-role-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-bottom: 16px;
+}
+.hero .content .inner .hero-role {
+  margin-bottom: 0;
+}
+#hero-role-text {
+  display: inline-block;
+}
+.hero-motion {
+  border: 0;
+  padding: 0;
+  color: #d9ced4;
+  background: transparent;
+  font-size: .8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.hero-actions a {
+  padding: 10px 16px;
+  border: 1px solid #b5a5ae;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.hero-actions a:first-child {
+  border-color: #ff9cbb;
+  background: #ff9cbb;
+  color: #28101a;
+}
+.hero-actions a:hover {
+  border-color: #fff;
+}
+.hero-actions a:focus-visible,
+.hero-motion:focus-visible {
+  outline-color: #ffb4cd;
+}
+main section[id] {
+  scroll-margin-top: 105px;
+}
+@media (max-width: 991px) {
+  .hero .thumbnail {
+    max-width: 340px;
+    margin-inline: auto;
+  }
+}

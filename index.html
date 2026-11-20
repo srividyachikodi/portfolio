@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261119-hero" />
 </head>
 
 <body>
@@ -65,13 +65,16 @@
                                 
                                 
                                 <li class="menu-item" >
-                                    <a href="#resume" style="color: #FF014F">Resume</a>
+                                    <a href="#resume" style="color: #FF014F">Experience</a>
                                 </li>
                                 <li class="menu-item" >
                                     <a href="#projects" style="color: #FF014F">Projects</a>
                                 </li>
                                 <li class="menu-item" >
-                                    <a href="#clients"style="color: #FF014F">Clients</a>
+                                    <a href="#clients" style="color: #FF014F">Clients</a>
+                                </li>
+                                <li class="menu-item d-xl-none">
+                                    <a href="#contactID" style="color: #FF014F">Contact</a>
                                 </li>
                                 
                                 
@@ -117,16 +120,26 @@
     <!-- Start Main Content -->
     <main>
         <!-- Start Hero Section -->
-        <section id="home" class="hero" style="background-color: black;">
+        <section id="home" class="hero">
             <div class="container">
                 <div class="row g-4 g-lg-5 align-items-center">
-                    <div class="order-2 order-lg-1 col-lg-7" style="background-color: black;">
+                    <div class="col-lg-7">
                         <div class="content">
                             <div class="inner" >
                                 <h1 class="title">Sri Vidya Chikodi</h1>
-                                <p class="hero-role">Senior Business Intelligence Analyst</p>
-                                <p class="description">I work at the University of Michigan and have 8+ years of experience in business intelligence and data analytics.</p>
-                                <p class="description">I build Tableau dashboards, automate workflows with SQL, Python, and Alteryx, and help teams improve enterprise reporting and data quality.</p>
+                                <div class="hero-role-row">
+                                    <p class="hero-role">
+                                        <span class="visually-hidden">Senior Business Intelligence Analyst</span>
+                                        <span id="hero-role-text" aria-hidden="true">Senior Business Intelligence Analyst</span>
+                                    </p>
+                                    <button class="hero-motion" type="button" hidden>Pause titles</button>
+                                </div>
+                                <p class="description">I’m a Senior Business Intelligence Analyst at the University of Michigan.</p>
+                                <p class="description">I build Tableau dashboards, automate reporting, and help teams improve data quality with SQL, Python, and Alteryx.</p>
+                                <div class="hero-actions">
+                                    <a href="#projects">View projects <span aria-hidden="true">→</span></a>
+                                    <a href="#resume">Explore experience</a>
+                                </div>
                             </div>
                             <div class="row g-4 g-sm-5 row-cols-1 row-cols-sm-2">
                                 <div class="col">
@@ -171,7 +184,7 @@
                         </div>
                     </div>
 
-                    <div class="order-1 order-lg-2 col-lg-5" >
+                    <div class="col-lg-5">
                         <div class="thumbnail">
                             <div class="inner">
                                 <img src="assets/images/Sri_Vidya.png" alt="Personal Portfolio Images" class="img-fluid">
@@ -192,7 +205,7 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center "    >
                             <span class="subtitle">8+ Years of Experience</span>
-                            <h2 class="title">My Resume</h2>
+                            <h2 class="title">Experience &amp; Skills</h2>
                         </div>
                     </div>
                 </div>
@@ -201,15 +214,14 @@
                     <div class="col-lg-12">
                         <ul class="resume_tabs shade_box nav nav-tabs flex-column flex-md-row" id="myTabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" id="education-tab" data-bs-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">education</a>
+                                <a class="nav-link" id="education-tab" data-bs-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="false">Education</a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link active" id="experience-tab" data-bs-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="true">experience</a>
+                                <a class="nav-link active" id="experience-tab" data-bs-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="true">Experience</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="professional-tab" data-bs-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">professional
-                                    Skills</a>
+                                <a class="nav-link" id="professional-tab" data-bs-toggle="tab" href="#professional" role="tab" aria-controls="professional" aria-selected="false">Skills</a>
                             </li>
                             
                         </ul>
@@ -807,7 +819,6 @@
                 <div class="content mb-4 mb-sm-5 mb-lg-0">
                     <span class="subtitle">2018 - Present</span>
                     <h4 class="maintitle">Professional Experience</h4>
-                    <p class="portfolio-experience-intro">Explore my work across higher education, finance, consulting, and enterprise analytics. Each role below highlights key contributions and technologies.</p>
                     <div class="experience-list portfolio-experience-timeline" aria-label="Professional experience timeline">
   <article class="resume-single-list portfolio-role-card">
     <div class="inner">
@@ -817,8 +828,8 @@
         <span class="portfolio-role-dates">Dec 2024 – Present</span>
       </div></div>
       <ul class="portfolio-experience-highlights">
-        <li>Consolidated 1,200+ legacy SAP BusinessObjects reports into 200+ prioritized reporting assets, improving governance and maintainability.</li>
-        <li>Automated financial, claims, and partner reporting with Alteryx, Python, SQL, and Tableau, reducing annual manual processing from 300+ hours to approximately 10.</li>
+        <li>Consolidated <strong>1,200+ legacy SAP BusinessObjects reports</strong> into 200+ prioritized reporting assets, improving governance and maintainability.</li>
+        <li>Automated financial, claims, and partner reporting with Alteryx, Python, SQL, and Tableau, reducing annual manual processing from <strong>300+ hours to approximately 10</strong>.</li>
         <li>Built executive and operational Tableau dashboards and governed reporting for sensitive financial, employee, and claims data.</li>
         <li>Led cross-team troubleshooting and recovery during SQL Server, RiskMaster, and vendor integration issues.</li>
       </ul>
@@ -1439,7 +1450,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?v=20261119-hero"></script>
 </body>
 
 </html>
