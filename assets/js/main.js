@@ -125,6 +125,15 @@ if (typeof Swiper === 'function' && document.querySelector('.swiper')) {
     });
 }
 
+const experienceTab = document.getElementById('experience-tab');
+if (experienceTab && window.bootstrap) {
+    document.querySelectorAll('a[href="#resume"]').forEach(link => {
+        link.addEventListener('click', () => {
+            bootstrap.Tab.getOrCreateInstance(experienceTab).show();
+        });
+    });
+}
+
 const rotatingTitle = document.getElementById('hero-role-text');
 const titleControl = document.querySelector('.hero-motion');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

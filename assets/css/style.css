@@ -2024,73 +2024,41 @@ body .section-title .title {
   outline: 2px solid var(--portfolio-accent);
   outline-offset: -3px;
 }
-.experience-heading {
-  margin-bottom: 1rem;
-  font-size: clamp(1.35rem, 3vw, 1.9rem);
-  font-weight: 700;
-}
-.experience-organizations {
+.work-history {
   display: grid;
-  gap: clamp(.75rem, 2vw, 1.25rem);
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  gap: 1.5rem 3rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 12px;
+  background: var(--portfolio-surface);
 }
-.experience-card {
-  --card-base: #291923;
-  --card-glow: #713353;
-  --card-accent: #ffb4cd;
-  position: relative;
-  isolation: isolate;
-  display: flex;
-  align-items: center;
-  min-block-size: clamp(11rem, 18vw, 15rem);
-  padding: clamp(1.4rem, 4.5vw, 3.75rem);
-  overflow: hidden;
-  border-radius: 18px;
-  background:
-    radial-gradient(ellipse at 100% 10%, var(--card-glow), transparent 70%),
-    var(--card-base);
-  box-shadow: 0 8px 24px #37102618;
-  color: #fff5fa;
-  font-size: clamp(1.65rem, 4.15vw, 3.4rem);
+.work-history-heading {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -.035em;
-  line-height: 1.16;
+  line-height: 1.15;
 }
-.experience-card:nth-child(even) {
-  --card-base: #202333;
-  --card-glow: #47456b;
-  --card-accent: #c8bef8;
+.work-history-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-block-start: 1px solid var(--portfolio-border);
 }
-.experience-card::before {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: var(--card-accent);
-  content: "";
-}
-.experience-card::after {
-  position: absolute;
-  z-index: -1;
-  inset: 50% -4% auto auto;
-  width: clamp(8rem, 30vw, 25rem);
-  aspect-ratio: 1;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: repeating-radial-gradient(circle, transparent 0 17px, var(--card-accent) 18px 19px, transparent 20px 29px);
-  opacity: .14;
-  content: "";
-  pointer-events: none;
-}
-.experience-card span {
-  max-inline-size: 24ch;
+.work-history-list > li {
+  margin: 0;
+  padding-block: clamp(.85rem, 2vw, 1.35rem);
+  border-block-end: 1px solid var(--portfolio-border);
+  color: var(--portfolio-ink);
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.4;
   overflow-wrap: anywhere;
-  text-wrap: balance;
 }
 @media (min-width: 768px) {
-  .experience-card {
-    padding-inline-end: clamp(6rem, 17vw, 14rem);
+  .work-history {
+    grid-template-columns: minmax(11rem, 1fr) minmax(0, 2.7fr);
+    align-items: start;
   }
 }
 #projects {
